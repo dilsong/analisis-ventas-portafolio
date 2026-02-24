@@ -1,0 +1,88 @@
+import os
+# ================================
+# CONCLUSIONES Y PLAN DE ACCIÓN
+# ================================
+
+conclusiones = """
+╔══════════════════════════════════════════════════════════════╗
+║     REPORTE EJECUTIVO - ANÁLISIS DE VENTAS 2022-2024        ║
+║              PROYECCIÓN Y PLAN DE ACCIÓN 2025               ║
+╚══════════════════════════════════════════════════════════════╝
+
+📊 RESUMEN EJECUTIVO
+─────────────────────────────────────────────────────────────
+- Período analizado: 2022 - 2024
+- Total ventas acumuladas: $1,221,446.60
+- Margen de ganancia general: 38%
+- Crecimiento 2024 vs promedio histórico: +10%
+- Proyección crecimiento 2025: +15%
+
+📈 HALLAZGOS PRINCIPALES
+─────────────────────────────────────────────────────────────
+1. REGIONES
+   • Centro lidera en ventas con mejores prácticas comerciales
+   • El poder adquisitivo es uniforme en todo el país
+   • Oportunidad: replicar estrategia de Centro en Oeste y Norte
+
+2. CATEGORÍAS
+   • Electrónica genera mayor volumen de ventas
+   • Ropa tiene el mayor margen de ganancia → PRIORIDAD
+   • Alimentos es rentable con bajo volumen → potencial de crecimiento
+   • Oportunidad: combinar categorías para aumentar ticket promedio
+
+3. TEMPORALIDAD
+   • Meses fuertes: Febrero, Mayo, Octubre, Diciembre
+   • Meses retadores: Marzo, Junio, Noviembre
+   • La tendencia general es positiva pero con picos irregulares
+
+⚡ PLAN DE ACCIÓN 2025
+─────────────────────────────────────────────────────────────
+ENERO   → Campaña de inicio de año y liquidaciones
+FEBRERO → Potenciar San Valentín (demostró ser fuerte)
+MARZO   → Campaña Día de la Mujer (mes retador, crear evento)
+ABRIL   → Promociones Semana Santa en Hogar y Alimentos
+MAYO    → Maximizar Día de la Madre (mayor potencial del año)
+JUNIO   → Campaña fin de año escolar anticipada (cayó en 2024)
+JULIO   → Promociones de verano en Deportes y Ropa
+AGOSTO  → Campaña regreso a clases en Electrónica y Ropa
+SEPTIEMBRE → Fiestas regionales por zona geográfica
+OCTUBRE → Potenciar Halloween (demostró ser fuerte)
+NOVIEMBRE → Implementar Black Friday agresivo (sin variación en 2024)
+DICIEMBRE → Maximizar temporada navideña en todas las categorías
+
+🎯 RECOMENDACIONES ESTRATÉGICAS
+─────────────────────────────────────────────────────────────
+1. Aplicar los 5 Porqués en los meses retadores para identificar
+   causas raíz de las caídas en ventas
+
+2. Crear combos de productos cruzando categorías:
+   Electrónica + Ropa → cliente tecnológico y fashionista
+   Alimentos + Hogar → cliente familiar
+
+3. Desarrollar programa de fidelización por región enfocado
+   en Norte y Oeste para elevar su desempeño al nivel de Centro
+
+4. Revisar política de descuentos, actualmente representan
+   pérdida de margen sin impacto claro en volumen
+
+5. Documentar las buenas prácticas de la región Centro
+   y capacitar a los vendedores de otras regiones
+
+📌 PRÓXIMOS PASOS
+─────────────────────────────────────────────────────────────
+- Implementar dashboard en Power BI para monitoreo en tiempo real
+- Agregar datos de competencia para análisis comparativo
+- Incluir métricas de satisfacción del cliente por región
+- Revisar estructura de comisiones del equipo de ventas
+"""
+
+print(conclusiones)
+
+# Ruta dinámica que funciona sin importar dónde esté el proyecto
+ruta_base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ruta_salida = os.path.join(ruta_base, 'salida', 'reporte_ejecutivo.txt')
+
+with open(ruta_salida, 'w', encoding='utf-8') as f:
+    f.write(conclusiones)
+
+print(f"✅ Reporte guardado en: {ruta_salida}")
